@@ -19,7 +19,7 @@ fi
 # Setup gitconfig if it doesn't exist or user agrees to override
 if [ ! -f "$HOME/.config/git/config" ] || ask "A .gitconfig file already exists. Would you like to override it?" Y; then
   print_muted "Creating a Syslink of gitconfig from ~/dotfiles/git/.gitconfig"
-  ln -sf configs/git/gitconfig $HOME/.config/git/config
+  ln -sf $OMAKOS_HOME/configs/git/gitconfig $HOME/.config/git/config
   print_success_muted "Syslink gitconfig file created"
 
   print_success "Git setup completed!"

@@ -17,15 +17,6 @@ else
   print_warning "Ghostty configuration file not found"
 fi
 
-# Symlink git configuration
-if [ -f "./configs/git/gitconfig" ]; then
-  step "Setting up git configuration..."
-  cp "./configs/git/gitconfig" "$HOME/.config/git/config"
-  print_success "Git configuration installed"
-else
-  print_warning "Git configuration file not found"
-fi
-
 # Copy zshrc configuration
 if [ -f "./configs/zshrc" ]; then
   step "Setting up Zsh configuration..."

@@ -21,6 +21,7 @@ indent="   "
 # Get full directory name of this script
 cwd="$(cd "$(dirname "$0")" && pwd)"
 
+OMAKOS_HOME="$HOME/omakos"
 
 ###############################################################################
 # Utility Functions
