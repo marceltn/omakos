@@ -14,7 +14,7 @@ fi
 print_success_muted "mise detected"
 
 # Check if mise configuration exists in home directory
-if [ -f "$HOME/.mise.toml" ]; then
+if [ -f "$HOME/.config/mise.toml" ]; then
   step "mise configuration found in home directory"
 
   # Install configured tools
@@ -24,12 +24,16 @@ if [ -f "$HOME/.mise.toml" ]; then
   # Print versions of installed tools
   step "Installed versions:"
   echo "----------------------------------------"
-  mise exec rust -- rustc --version
-  mise exec ruby -- ruby --version
-  mise exec go -- go version
-  mise exec node -- node --version
-  mise exec python -- python --version
+  mise current
   echo "----------------------------------------"
+
+  # Configure auto completion
+  if [ -f "/usr/local/share/zsh/site-functions/_mise" ]; then
+    step "Installing auto completion:"
+    mise use -g usage
+    mise completion zsh > /usr/local/share/zsh/site-functions/_mise
+    print_success "Auto completion installed successfully"
+  fi
 
   print_success "All development tools installed successfully!"
 else

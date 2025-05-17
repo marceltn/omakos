@@ -8,26 +8,19 @@ step "Customizing macOS system preferences..."
 
 # Keyboard settings
 step "Setting faster keyboard repeat rates..."
-defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 1         # normal minimum is 2 (30 ms)
+defaults write -g InitialKeyRepeat -int 25 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 2         # normal minimum is 2 (30 ms)
 print_success_muted "Keyboard repeat rates configured"
 
 # Finder preferences
 step "Showing hidden files and file extensions in Finder..."
 defaults write com.apple.finder AppleShowAllFiles YES
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 print_success_muted "Finder preferences configured"
-
-# System preferences
-step "Enabling tap-to-click and removing app security warnings..."
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-print_success_muted "System preferences configured"
 
 # Text and input preferences
 step "Disabling automatic text corrections and substitutions..."
@@ -57,11 +50,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 print_success_muted ".DS_Store settings configured"
 
-# Show Library folder
-step "Making Library folder visible in home directory..."
-chflags nohidden ~/Library
-print_success_muted "Library folder made visible"
-
 # Dock settings
 step "Removing Dock animation delays and clearing default apps..."
 defaults write com.apple.Dock autohide-delay -float 0
@@ -72,11 +60,6 @@ defaults write com.apple.dock springboard-hide-duration -int 0
 defaults write com.apple.dock springboard-page-duration -int 0
 defaults write com.apple.dock persistent-apps -array
 print_success_muted "Dock preferences configured"
-
-# iCloud default save
-step "Setting default save location to local disk instead of iCloud..."
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-print_success_muted "Default save location configured"
 
 # Disable Apple Intelligence
 step "Disabling Apple Intelligence..."

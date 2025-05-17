@@ -2,9 +2,14 @@
 # Latest versions of each tool
 rust = 'latest'
 ruby = 'latest'
-go = 'latest'
 node = 'lts'
 python = 'latest'
+"cargo:eza" = "latest"
+"cargo:ripgrep" = "latest"
+"cargo:bat" = "latest"
+"cargo:du-dust" = "latest"
+"cargo:fd-find" = "latest"
+"cargo:tree-sitter-cli" = "latest"
 
 [settings]
 # Always keep the downloaded archives for faster reinstalls

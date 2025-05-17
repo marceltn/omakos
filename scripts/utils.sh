@@ -21,7 +21,6 @@ indent="   "
 # Get full directory name of this script
 cwd="$(cd "$(dirname "$0")" && pwd)"
 
-DOTFILES_ROOT=$HOME/.dotfiles
 
 ###############################################################################
 # Utility Functions
