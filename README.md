@@ -88,13 +88,11 @@ All packages are managed through Homebrew and defined in [`configs/Brewfile`](co
 ### Development Environment
 
 - [Ghostty](https://github.com/mitchellh/ghostty) - Modern terminal emulator
-- [Redis](https://redis.io/) for in-memory data store
 - [Ollama](https://ollama.ai/) for local AI models
 - [Mise](https://mise.jdx.dev/) for runtime version management. The Mise configuration is present in [mise.toml](configs/mise.toml). It installs
 
 ### Productivity & Communication
 
-- [1Password](https://1password.com/)
 - [Brave Browser](https://brave.com/)
 - [Discord](https://discord.com/)
 - [Raycast](https://www.raycast.com/)
@@ -102,7 +100,7 @@ All packages are managed through Homebrew and defined in [`configs/Brewfile`](co
 
 ### Fonts
 
-- Hack
+- Hack Nerd Font
 
 ## Features
 

@@ -20,4 +20,4 @@ cask "whatsapp"
 cask "zed"
 
 # Fonts
-cask "font-hack"
+cask "font-hack-nerd-font"

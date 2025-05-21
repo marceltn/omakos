@@ -1,5 +1,6 @@
 DOTFILES_ROOT=$HOME/dotfiles
 BASEDIR=$DOTFILES_ROOT
+XDG_CONFIG_HOME=$HOME/.config
 for config_file ($BASEDIR/shell/*.zsh) source $config_file
 
 autoload -U +X bashcompinit && bashcompinit

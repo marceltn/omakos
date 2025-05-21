@@ -8,7 +8,7 @@ mkdir -p "$HOME/.config"
 mkdir -p "$HOME/.config/git"
 mkdir -p "$HOME/.config/ghostty"
 
-# Symlink ghostty configuration
+# Copy ghostty configuration
 if [ -f "./configs/ghostty.conf" ]; then
   step "Setting up Ghostty configuration..."
   cp "./configs/ghostty.conf" "$HOME/.config/ghostty/config"
