@@ -10,6 +10,7 @@ step "Customizing macOS system preferences..."
 step "Setting faster keyboard repeat rates..."
 defaults write -g InitialKeyRepeat -int 25 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 2         # normal minimum is 2 (30 ms)
+defaults write -g ApplePressAndHoldEnabled -bool false # disable character picker
 print_success_muted "Keyboard repeat rates configured"
 
 # Finder preferences

@@ -71,6 +71,12 @@ To update `mise` dependencies after edit `./configs/mise.toml`
 make mise
 ```
 
+To update Mac Setup
+
+```sh
+make mac
+```
+
 ## What it sets up
 
 The setup process will install and configure the following tools and applications.
