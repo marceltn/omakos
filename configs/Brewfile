@@ -8,6 +8,7 @@ brew "mise"
 brew "ollama"
 brew "starship"
 brew "wget"
+brew "zellij"
 brew "zsh"
 brew "zoxide"
 
